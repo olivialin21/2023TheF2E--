@@ -1,0 +1,66 @@
+.header {
+  background-color: $color-white;
+  padding: 16px 0;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.15);
+
+  &-logo {
+    display: block;
+    background-image: url(../../images/logo.svg);
+    width: 235px;
+    height: 59px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &-nav {
+    &-item {
+      position: relative;
+      font-weight: bold;
+      font-size: $fs-heading-5;
+      color: $color-black;
+      margin-left: 36px;
+      padding: 11px 8px;
+
+      &:hover {
+        color: $color-black;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: $color-purple;
+        transition: all 0.3s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      &-purple{
+        font-weight: bold;
+        font-size: $fs-heading-5;
+        color: $color-white;
+        background-color: $color-purple;
+        margin-left: 36px;
+        padding: 11px 20px !important;
+        border-radius: 30px;
+        transition: all 0.3s;
+        
+        &:hover {
+          color: $color-white;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
