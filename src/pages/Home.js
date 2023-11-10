@@ -1,6 +1,7 @@
 import Header from '../components/Header'
 import Candidate from '../components/Candidate'
 import Activity from '../components/Activity'
+import Policy from '../components/Policy'
 import Footer from '../components/Footer'
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       <Header />
       <Candidate />
       <Activity />
+      <Policy />
       <Footer />
     </>
   )

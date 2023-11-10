@@ -8,7 +8,6 @@ import imgCandidate from "../images/img-candidate.png";
 
 export default function Candidate() {
   return (
-    <>
     <section className="candidate">
       <Container>
         <div className="candidate-keyVision">
@@ -33,6 +32,5 @@ export default function Candidate() {
         </div>
       </Container>
     </section>
-    </>
   )
 }

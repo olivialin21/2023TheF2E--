@@ -1,3 +1,4 @@
+// font-style
 @mixin text-heading1-bold {
   font-size: $fs-heading-1;
   font-weight: bold;
@@ -49,4 +50,13 @@
   font-size: $fs-body-sm;
   font-weight: 500;
 
+}
+
+// component
+@mixin green-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  color: $color-light;
+  background-color: $color-green;
+  border-radius: 8px 0 8px 0;
 }
