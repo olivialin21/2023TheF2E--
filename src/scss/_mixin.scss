@@ -60,3 +60,23 @@
   background-color: $color-green;
   border-radius: 8px 0 8px 0;
 }
+
+@mixin purple-btn{
+  @include text-heading3-bold;
+  display: inline-block;
+  padding: 20px 30px;
+  color: $color-light;
+  background-color: $color-purple;
+  border: 3px solid $color-purple;
+  border-radius: 100px;
+  transition: all 0.3s;
+
+  &:hover{
+    color: $color-purple;
+    background-color:$color-light;
+
+    svg{
+      fill: $color-purple !important;
+    }
+  }
+}

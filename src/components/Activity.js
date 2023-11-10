@@ -39,7 +39,7 @@ export default function Activity() {
               </div>
               <div className="activity-list-card-text activity-list-cardS-text">
                 <time datatime="2023-12-20">2023.12.20</time>
-                <h3>帶著你的貓耳，來和我一起走！</h3>
+                <h3>收容所模特兒大比拼！</h3>
                 <p>活動三消息內容：今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！</p>
               </div>
             </li>

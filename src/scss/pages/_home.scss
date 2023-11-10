@@ -65,18 +65,11 @@
       }
 
       &-purple {
+        @include purple-btn;
         @include text-heading5-bold;
-        color: $color-white;
-        background-color: $color-purple;
         margin-left: 50px;
-        padding: 11px 20px !important;
+        padding: 8px 20px !important;
         border-radius: 30px;
-        transition: all 0.3s;
-
-        &:hover {
-          color: $color-white;
-          opacity: 0.8;
-        }
       }
     }
   }
@@ -178,10 +171,6 @@
       &:hover {
         cursor: pointer;
         box-shadow: 0 0 0 3px $color-purple;
-
-        h3 {
-          color: $color-purple;
-        }
 
         img {
           scale: 1.2;
@@ -360,6 +349,57 @@
           display: inline-block;
           position: absolute;
         }
+      }
+    }
+  }
+}
+
+// donation
+.donation {
+  padding: 45px 0;
+  background-image: url(../../images/bg-donation.png);
+  background-size: cover;
+  background-position: center;
+
+  &-card {
+    display: inline-block;
+    width: 679px;
+    padding: 30px;
+    border-radius: 80px;
+    background-color: $color-light;
+    text-align: center;
+
+    &-title {
+      margin: 0 auto;
+      padding: 7px 0;
+    }
+
+    &-text {
+      @include text-heading4-bold;
+      padding: 20px 0;
+    }
+
+    &-total {
+      margin: 0 auto;
+      padding: 11px 0;
+
+      &Num {
+        font-size: 60px;
+        line-height: 1.2;
+        font-weight: 900;
+        color: $color-purple;
+      }
+    }
+
+    &-goToDanate {
+      @include purple-btn;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px auto 0;
+
+      img {
+        display: inline-block;
       }
     }
   }
