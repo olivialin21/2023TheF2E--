@@ -1,7 +1,8 @@
+// header
 .header {
   background-color: $color-white;
-  padding: 16px 0;
-  box-shadow: 0 0 4px 0 rgba(0,0,0,0.15);
+  padding: 18px 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
 
   &-logo {
     display: block;
@@ -24,8 +25,8 @@
       font-weight: bold;
       font-size: $fs-heading-5;
       color: $color-black;
-      margin-left: 36px;
-      padding: 11px 8px;
+      margin-left: 50px;
+      padding: 11px 0 !important;
 
       &:hover {
         color: $color-black;
@@ -46,21 +47,97 @@
         width: 100%;
       }
 
-      &-purple{
+      &-purple {
         font-weight: bold;
         font-size: $fs-heading-5;
         color: $color-white;
         background-color: $color-purple;
-        margin-left: 36px;
+        margin-left: 50px;
         padding: 11px 20px !important;
         border-radius: 30px;
         transition: all 0.3s;
-        
+
         &:hover {
           color: $color-white;
           opacity: 0.8;
         }
       }
+    }
+  }
+}
+
+// candidate
+.candidate {
+  &-keyVision{
+    position: relative;
+    padding: 30px 0;
+  }
+
+  &-titles-1 {
+    position: absolute;
+    z-index: 9;
+    top: 146px;
+  }
+
+  &-titles-2{
+    position: relative;
+  }
+
+  &-title {
+    &-1 {
+      padding: 11.5px 0;
+    }
+
+    &-2 {
+      padding: 9.5px 0;
+    }
+
+    &-3 {
+      position: absolute;
+      top: 491px;
+    }
+
+    &-4 {
+      position: absolute;
+      padding: 13.5px 5px;
+      bottom: 17px;
+      left: 53px;
+    }
+
+    &-5 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &-image {
+    position: relative;
+    z-index: 9;
+    margin-left: auto;
+    margin-right: 75px;
+    margin-bottom: -1px; // svg 邊緣沒切好
+  }
+
+  &-claim{
+    max-width: 1080px;
+    margin-left: auto;
+    padding: 40px 50px 50px;
+    background-color: $color-white;
+    border: 5px solid $color-purple;
+    box-shadow: -15px 20px 0px 0px $color-purple;
+    border-radius: 80px 0 80px 0;
+
+    h2{
+      font-size: $fs-heading-1;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 33px;
+    }
+
+    p{
+      font-size: $fs-heading-4;
+      font-weight: bold;
     }
   }
 }

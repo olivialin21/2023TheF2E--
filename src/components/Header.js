@@ -18,56 +18,5 @@ export default function Header() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    // <header className="header">
-    //   <Container>
-    //     <div className="header-container">
-    //       <h1 className="header-logo"><Link href="/">喵立翰立委競選官網</Link></h1>
-    //       <nav className="header-nav">
-    //         <ul>
-    //           <li>
-    //             <Link
-    //               to="/"
-    //               className="header-nav-item"
-    //             > 
-    //               候選人主張
-    //             </Link>
-    //           </li>
-    //           <li>
-    //             <Link
-    //               to="/"
-    //               className="header-nav-item"
-    //             >
-    //               候選人主張
-    //             </Link>
-    //           </li>
-    //           <li>
-    //             <Link
-    //               to="/"
-    //               className="header-nav-item"
-    //             >
-    //               候選人主張
-    //             </Link>
-    //           </li>
-    //           <li>
-    //             <Link
-    //               to="/"
-    //               className="header-nav-item"
-    //             >
-    //               候選人主張
-    //             </Link>
-    //           </li>
-    //           <li>
-    //             <Link
-    //               to="/"
-    //               className="header-nav-item"
-    //             >
-    //               候選人主張
-    //             </Link>
-    //           </li>
-    //         </ul>
-    //       </nav>
-    //     </div>
-    //   </Container>
-    // </header>
   )
 }
