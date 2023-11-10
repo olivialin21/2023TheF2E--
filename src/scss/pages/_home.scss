@@ -21,9 +21,8 @@
 
   &-nav {
     &-item {
+      @include text-heading5-bold;
       position: relative;
-      font-weight: bold;
-      font-size: $fs-heading-5;
       color: $color-black;
       margin-left: 50px;
       padding: 11px 0 !important;
@@ -68,15 +67,16 @@
 
 // candidate
 .candidate {
+  padding: 30px 0;
+
   &-keyVision{
     position: relative;
-    padding: 30px 0;
   }
 
   &-titles-1 {
     position: absolute;
     z-index: 9;
-    top: 146px;
+    top: 116px;
   }
 
   &-titles-2{
@@ -140,4 +140,9 @@
       font-weight: bold;
     }
   }
+}
+
+// activity
+.activity{
+  padding: 25px 0 45px;
 }

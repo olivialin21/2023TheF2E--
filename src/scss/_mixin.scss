@@ -1,0 +1,52 @@
+@mixin text-heading1-bold {
+  font-size: $fs-heading-1;
+  font-weight: bold;
+}
+
+@mixin text-heading2-bold {
+  font-size: $fs-heading-2;
+  font-weight: bold;
+}
+
+@mixin text-heading3-bold {
+  font-size: $fs-heading-3;
+  font-weight: bold;
+}
+
+@mixin text-heading4-bold {
+  font-size: $fs-heading-4;
+  font-weight: bold;
+}
+
+@mixin text-heading5-bold {
+  font-size: $fs-heading-5;
+  font-weight: bold;
+}
+
+@mixin text-heading6-bold {
+  font-size: $fs-heading-6;
+  font-weight: bold;
+}
+
+@mixin text-bodyLarge-regular {
+  font-size: $fs-body-lg;
+  font-weight: 500;
+}
+
+@mixin text-bodyMedium-regular {
+  font-size: $fs-body-md;
+  font-weight: 500;
+
+}
+
+@mixin text-bodyNormal-regular {
+  font-size: $fs-body-nm;
+  font-weight: 500;
+
+}
+
+@mixin text-bodySmail-regular {
+  font-size: $fs-body-sm;
+  font-weight: 500;
+
+}

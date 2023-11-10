@@ -5,7 +5,7 @@ export default function Activity() {
     <>
       <section className="activity">
         <Container>
-
+          <h3 className="">最新活動</h3>
         </Container>
       </section>
     </>
