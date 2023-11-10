@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 function Home() {
   return (
     <>
+      <div className="body-border"></div>
       <Header />
       <Candidate />
       <Activity />

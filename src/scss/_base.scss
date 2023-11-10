@@ -14,24 +14,29 @@
 // ::-webkit-scrollbar-track {
 //   background-color: #3c3c3c;
 // }
-*,*::before,*::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
-body{
+
+body {
   font-family: 'Noto Sans TC', sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
   min-height: 100vh;
   background-color: $color-gray;
-  border: 5px solid $color-purple;
 }
-img{
+
+img {
   display: block;
   max-width: 100%;
 }
-a{
+
+a {
   text-decoration: none;
 }

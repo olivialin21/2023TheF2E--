@@ -1,5 +1,23 @@
+// body border
+.body-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid $color-purple;
+  border-bottom: 0;
+  z-index: 99999;
+  pointer-events: none;
+}
+
 // header
 .header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: $color-white;
   padding: 18px 0;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
@@ -47,8 +65,7 @@
       }
 
       &-purple {
-        font-weight: bold;
-        font-size: $fs-heading-5;
+        @include text-heading5-bold;
         color: $color-white;
         background-color: $color-purple;
         margin-left: 50px;
@@ -67,9 +84,10 @@
 
 // candidate
 .candidate {
+  margin-top: 95px;
   padding: 30px 0;
 
-  &-keyVision{
+  &-keyVision {
     position: relative;
   }
 
@@ -79,7 +97,7 @@
     top: 116px;
   }
 
-  &-titles-2{
+  &-titles-2 {
     position: relative;
   }
 
@@ -119,30 +137,153 @@
     margin-bottom: -1px; // svg 邊緣沒切好
   }
 
-  &-claim{
+  &-claim {
     max-width: 1080px;
     margin-left: auto;
     padding: 40px 50px 50px;
-    background-color: $color-white;
+    background-color: $color-light;
     border: 5px solid $color-purple;
     box-shadow: -15px 20px 0px 0px $color-purple;
     border-radius: 80px 0 80px 0;
 
-    h2{
-      font-size: $fs-heading-1;
-      font-weight: bold;
+    h2 {
+      @include text-heading1-bold;
       text-align: center;
       margin-bottom: 33px;
     }
 
-    p{
-      font-size: $fs-heading-4;
-      font-weight: bold;
+    p {
+      @include text-heading4-bold;
     }
   }
 }
 
 // activity
-.activity{
+.activity {
   padding: 25px 0 45px;
+
+  &-title {
+    margin: 0 auto;
+  }
+
+  &-list {
+    display: flex;
+    padding-top: 30px;
+
+    &-card {
+      border-radius: 8px;
+      box-shadow: 0 0 0 3px transparent;
+      transition: all 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 0 3px $color-purple;
+
+        h3 {
+          color: $color-purple;
+        }
+
+        img {
+          scale: 1.2;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        scale: 1;
+        transition: all 0.3s;
+      }
+
+      &-img {
+        overflow: hidden;
+      }
+
+      &-text {
+        padding: 15px;
+        background-color: $color-light;
+
+        h3 {
+          @include text-heading4-bold;
+          margin-bottom: 10px;
+          transition: all 0.3s;
+        }
+
+        p {
+          @include text-bodyMedium-regular;
+        }
+      }
+    }
+
+    &-cardB {
+      height: 100%;
+      position: relative;
+      margin-right: 3px;
+
+      .activity-list-card-img {
+        width: 100%;
+        height: 325px;
+        border-radius: 8px 8px 0 0;
+      }
+
+      time {
+        display: block;
+        position: absolute;
+        z-index: 9;
+        width: 75px;
+        height: 75px;
+        top: 0;
+        right: 0;
+        @include text-heading6-bold;
+        text-align: center;
+        color: $color-light;
+        background-color: $color-green;
+        padding: 5px 10px;
+        border-radius: 0 8px 0 0;
+
+        span {
+          @include text-heading2-bold;
+          line-height: 36px;
+        }
+      }
+
+      &-text {
+        height: calc(100% - 325px);
+        border-radius: 0 0 8px 8px;
+      }
+    }
+
+    &-cardS {
+      display: flex;
+
+      &-1 {
+        margin-bottom: 30px;
+      }
+
+      .activity-list-card-img {
+        min-width: 276px;
+        height: 232px;
+        border-radius: 8px 0 0 8px;
+      }
+
+      time {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        color: $color-light;
+        background-color: $color-green;
+        border-radius: 8px 0 8px 0;
+      }
+
+      &-text {
+        border-radius: 0 8px 8px 0;
+      }
+    }
+  }
+
+  &_insideList {
+    padding-left: 15px;
+  }
 }
