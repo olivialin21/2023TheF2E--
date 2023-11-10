@@ -61,22 +61,42 @@
   border-radius: 8px 0 8px 0;
 }
 
-@mixin purple-btn{
+@mixin purple-btn {
   @include text-heading3-bold;
   display: inline-block;
-  padding: 20px 30px;
+  padding: 17px 27px;
   color: $color-light;
   background-color: $color-purple;
   border: 3px solid $color-purple;
   border-radius: 100px;
   transition: all 0.3s;
 
-  &:hover{
+  &:hover {
     color: $color-purple;
-    background-color:$color-light;
+    background-color: $color-light;
 
-    svg{
+    svg {
       fill: $color-purple !important;
     }
+  }
+}
+
+@mixin input-style {
+  @include text-bodyNormal-regular;
+  display: block;
+  max-width: 361px;
+  width: 100%;
+  border-color: $color-white;
+  padding: 9px 11px;
+  margin: 0 auto 20px;
+  border: 1px solid $color-gray-deep;
+  border-radius: 8px;
+
+  &::placeholder {
+    color: $color-gray-light;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

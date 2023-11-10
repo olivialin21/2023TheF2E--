@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 import { useEffect, useRef } from 'react';
-import titleDonation from "../images/text-donation-total.svg";
-import textTotal from "../images/title-donation.svg";
+import titleDonation from "../images/title-donation.svg";
+import textTotal from "../images/text-donation-total.svg";
 import { ReactComponent as IconCoin } from "../images/icon-coin.svg";
 import counterUp from "counterup2";
 
@@ -47,7 +47,7 @@ export default function Donation() {
           <p>NT$987,655,873</p>
           <button>前往捐款</button>
         </div> */}
-
+        
       </Container>
     </section>
   )

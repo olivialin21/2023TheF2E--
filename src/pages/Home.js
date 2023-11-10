@@ -1,9 +1,10 @@
-import Header from '../components/Header'
-import Candidate from '../components/Candidate'
-import Activity from '../components/Activity'
-import Policy from '../components/Policy'
-import Donation from '../components/Donation'
-import Footer from '../components/Footer'
+import Header from '../components/Header';
+import Candidate from '../components/Candidate';
+import Activity from '../components/Activity';
+import Policy from '../components/Policy';
+import Donation from '../components/Donation';
+import Email from '../components/Email';
+import Footer from '../components/Footer';
 
 function Home() {
   return (
@@ -13,7 +14,8 @@ function Home() {
       <Candidate />
       <Activity />
       <Policy />
-      <Donation />
+      <Donation/>
+      <Email />
       <Footer />
     </>
   )

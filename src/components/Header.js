@@ -12,7 +12,7 @@ export default function Header() {
             <HashLink to="#" className="header-nav-item">候選人主張</HashLink>
             <HashLink to="#activity" className="header-nav-item">最新活動</HashLink>
             <HashLink to="#policy" className="header-nav-item">政策議題</HashLink>
-            <HashLink to="#" className="header-nav-item">民眾服務信箱</HashLink>
+            <HashLink to="#email" className="header-nav-item">民眾服務信箱</HashLink>
             <HashLink to="#donation" className="header-nav-item-purple">小額捐款</HashLink>
           </Nav>
         </Navbar.Collapse>
