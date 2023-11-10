@@ -194,7 +194,7 @@
         object-fit: cover;
         object-position: center;
         scale: 1;
-        transition: all 0.3s;
+        transition: all 0.5s;
       }
 
       &-img {
@@ -297,18 +297,31 @@
     padding-top: 30px;
 
     &-card {
-      min-height: 379px;
+      height: 379px;
       padding: 15px;
       background-color: $color-light;
       border-radius: 8px;
       transition: all 0.3s;
+      overflow: hidden;
 
       &:hover {
         cursor: pointer;
         box-shadow: 0 0 0 3px $color-green;
-    
-        h3 {
-          color: $color-purple;
+
+        .policy-list-card-tag {
+          opacity: 0;
+        }
+
+        .policy-list-card-text {
+          transform: translateY(-44px);
+        }
+
+        .policy-list-card-text-ellipsis {
+          display: none;
+        }
+
+        .policy-list-card-text-hidden {
+          opacity: 1;
         }
       }
 
@@ -332,6 +345,21 @@
 
       &-tag {
         @include green-tag;
+        transition: all 0.5s;
+      }
+
+      &-text {
+        transition: all 0.5s;
+
+        &-hidden {
+          transition: all 0.5s;
+          opacity: 0;
+        }
+
+        &-ellipsis {
+          display: inline-block;
+          position: absolute;
+        }
       }
     }
   }
