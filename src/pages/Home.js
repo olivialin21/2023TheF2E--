@@ -1,3 +1,4 @@
+// import { ParallaxProvider } from 'react-scroll-parallax';
 import Header from '../components/Header';
 import Candidate from '../components/Candidate';
 import Activity from '../components/Activity';
@@ -9,14 +10,16 @@ import Footer from '../components/Footer';
 function Home() {
   return (
     <>
+      {/* <ParallaxProvider> */}
       <div className="body-border"></div>
       <Header />
       <Candidate />
       <Activity />
       <Policy />
-      <Donation/>
+      <Donation />
       <Email />
       <Footer />
+      {/* </ParallaxProvider> */}
     </>
   )
 }

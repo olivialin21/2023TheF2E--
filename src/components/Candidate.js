@@ -1,3 +1,4 @@
+// import { useParallax } from 'react-scroll-parallax';
 import { Container } from 'react-bootstrap';
 import textTitle1 from "../images/text-candidate-title1.svg";
 import textTitle2 from "../images/text-candidate-title2.svg";
@@ -7,6 +8,10 @@ import textTitle5 from "../images/text-candidate-title5.svg";
 import imgCandidate from "../images/img-candidate.png";
 
 export default function Candidate() {
+  // const { ref } = useParallax({
+  //   speed: -20,
+  // });
+
   return (
     <section className="candidate" id="candidate">
       <Container>
