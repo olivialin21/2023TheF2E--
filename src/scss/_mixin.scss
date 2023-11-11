@@ -81,6 +81,26 @@
   }
 }
 
+@mixin white-btn {
+  @include text-heading3-bold;
+  display: inline-block;
+  padding: 17px 27px;
+  color: $color-purple;
+  background-color: $color-light;
+  border: 3px solid $color-purple;
+  border-radius: 100px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-light;
+    background-color: $color-purple;
+
+    svg {
+      fill: $color-purple !important;
+    }
+  }
+}
+
 @mixin input-style {
   @include text-bodyNormal-regular;
   display: block;
@@ -91,6 +111,7 @@
   margin: 0 auto 20px;
   border: 1px solid $color-gray-deep;
   border-radius: 8px;
+  background-color: $color-white;
 
   &::placeholder {
     color: $color-gray-light;
@@ -99,4 +120,16 @@
   &:focus {
     outline: none;
   }
+}
+
+@mixin donation-card {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border-radius: 80px;
+  background-color: $color-light;
+  text-align: center;
+  backface-visibility: hidden;
 }
