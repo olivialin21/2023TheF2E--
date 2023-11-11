@@ -2,13 +2,28 @@ import useReducerWithThunk from "use-reducer-thunk";
 import { createContext } from "react";
 
 import {
-  FLIP_CARD
+  FLIP_CARD,
+  SET_FORM_INPUT_ERROR,
+  RESET_FORM_INPUT_ERROR
 } from "../utils";
 
 export const StoreContext = createContext();
 const initialState = {
-  card: {
-    isFlipped: false,
+  donation: {
+    card: {
+      isFlipped: false,
+    }
+  },
+  email: {
+    formInputError: {
+      name: false,
+      email: false,
+      tel: false,
+      message: false,
+    },
+    modal: {
+      show: false,
+    }
   }
 }
 
@@ -17,8 +32,36 @@ function reducer(state, action) {
     case FLIP_CARD:
       return {
         ...state,
-        card: {
-          isFlipped: !state.card.isFlipped
+        donation: {
+          ...state.donation,
+          card: {
+            ...state.donation.card,
+            isFlipped: !state.donation.card.isFlipped
+          }
+        }
+      };
+    case SET_FORM_INPUT_ERROR:
+      return {
+        ...state,
+        email: {
+          ...state.email,
+          formInputError: {
+            ...state.email.formInputError,
+            [action.payload]: true
+          }
+        }
+      };
+    case RESET_FORM_INPUT_ERROR:
+      return {
+        ...state,
+        email: {
+          ...state.email,
+          formInputError: {
+            name: false,
+            email: false,
+            tel: false,
+            message: false,
+          }
         }
       };
     default:

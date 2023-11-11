@@ -83,8 +83,9 @@
 
 @mixin white-btn {
   @include text-heading3-bold;
-  display: inline-block;
-  padding: 17px 27px;
+  display: flex;
+  align-items: center;
+  padding: 17px 57px;
   color: $color-purple;
   background-color: $color-light;
   border: 3px solid $color-purple;
