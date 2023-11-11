@@ -9,7 +9,7 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto header-nav">
-            <HashLink to="#" className="header-nav-item">候選人主張</HashLink>
+            <HashLink to="#candidate" className="header-nav-item">候選人主張</HashLink>
             <HashLink to="#activity" className="header-nav-item">最新活動</HashLink>
             <HashLink to="#policy" className="header-nav-item">政策議題</HashLink>
             <HashLink to="#email" className="header-nav-item">民眾服務信箱</HashLink>

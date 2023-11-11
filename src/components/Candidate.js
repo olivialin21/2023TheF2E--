@@ -8,7 +8,7 @@ import imgCandidate from "../images/img-candidate.png";
 
 export default function Candidate() {
   return (
-    <section className="candidate">
+    <section className="candidate" id="candidate">
       <Container>
         <div className="candidate-keyVision">
           <div className="candidate-titles-1">

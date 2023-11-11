@@ -438,12 +438,12 @@
         line-height: 30px;
       }
 
-      textarea{
+      textarea {
         @include input-style;
         min-height: 100px;
       }
 
-      &-btn{
+      &-btn {
         @include purple-btn;
       }
     }
@@ -451,32 +451,110 @@
 }
 
 // footer
-.footer{
+.footer {
   padding: 15px 0;
   background-color: $color-purple;
 
-  &-content{
+  a {
+    transition: all 0.3s;
+  }
+
+  a:hover {
+    color: $color-yellow;
+  }
+
+  &-area {
     position: relative;
   }
 
-  &-cat{
+  &-cat {
     position: absolute;
     top: -196px;
     left: 7%;
+    pointer-events: none;
   }
 
-  &-logo {
-    display: block;
-    background-image: url(../../images/logo-dark.svg);
-    width: 235px;
-    height: 59px;
-    text-indent: 101%;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: all 0.3s;
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    &:hover {
-      opacity: 0.8;
+    &-logo {
+      display: block;
+      background-image: url(../../images/logo-dark.svg);
+      width: 235px;
+      height: 59px;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: all 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
     }
+
+    &-title {
+      @include text-bodySmail-regular;
+      line-height: 20px;
+      color: $color-yellow;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    &-nav {
+      width: 215px;
+      margin-left: auto;
+      margin-right: 60px;
+
+      &-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 5px 0;
+
+        li {
+          width: 90px;
+          height: 22px;
+          text-align: center;
+        }
+
+        li:nth-child(even) {
+          width: 75px;
+        }
+      }
+
+      &-item {
+        @include text-bodyNormal-regular;
+        color: $color-light;
+        display: inline-block;
+      }
+    }
+
+    &-info {
+      width: 371px;
+
+      &-list {
+        @include text-bodyNormal-regular;
+        color: $color-light;
+        padding-left: 30px;
+        margin-top: 5px;
+
+        a {
+          color: $color-light;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+
+
+  &-copyright {
+    @include text-bodySmail-regular;
+    margin-top: 20px;
+    text-align: center;
+    color: $color-gray-dark;
   }
 }
