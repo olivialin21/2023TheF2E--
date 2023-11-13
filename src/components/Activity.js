@@ -6,7 +6,7 @@ import imgActivity3 from "../images/img-activity3.png";
 
 export default function Activity() {
   return (
-    <section className="activity" id="activity">
+    <section data-aos="fade-up" data-aos-offset="700" className="activity" id="activity">
       <Container>
         <img className="activity-title" src={titleActivity} alt="最新活動" />
         <div className="row activity-list">

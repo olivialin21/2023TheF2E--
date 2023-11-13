@@ -48,8 +48,8 @@ const donateInputOnClick = (e) => {
 
 return (
   <section className="donation" id="donation">
-    <Container>
-      <div className={`donation-card ${isFlipped ? "flipped" : ""}`}>
+    <Container data-aos="fade-up" data-aos-offset="800">
+      <div className={`${isFlipped ? "flipped" : ""} donation-card`}>
         <div className="donation-card-inner">
           <div className="donation-card-front">
             <img className="donation-card-front-title" src={titleDonation} alt="小額捐款" />

@@ -16,7 +16,7 @@ export default function Email() {
   return (
     <>
       <section className="email" id="email">
-        <Container>
+        <Container data-aos="fade-up" data-aos-offset="800">
           <div className="row email-content">
             <div className="col-7 email-content-text">
               <img className="email-content-title" src={titleEmail} alt="民眾服務信箱" />

@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <Navbar expand="lg" className="header">
       <Container>
-        <Navbar.Brand href="#" className="header-logo">喵立翰立委競選官網</Navbar.Brand>
+        <h1><Navbar.Brand href="#" className="header-logo">喵立翰立委競選官網</Navbar.Brand></h1>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto header-nav">

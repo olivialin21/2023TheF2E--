@@ -77,8 +77,8 @@
 
 // candidate
 .candidate {
-  margin-top: 95px;
-  padding: 30px 0;
+  // margin-top: 95px;
+  padding: 120px 0 30px;
 
   &-keyVision {
     position: relative;
@@ -646,26 +646,26 @@
     pointer-events: none;
   }
 
+  &-logo {
+    display: block;
+    background-image: url(../../images/logo-dark.svg);
+    width: 235px;
+    height: 59px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
   &-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    &-logo {
-      display: block;
-      background-image: url(../../images/logo-dark.svg);
-      width: 235px;
-      height: 59px;
-      text-indent: 101%;
-      overflow: hidden;
-      white-space: nowrap;
-      transition: all 0.3s;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 0.8;
-      }
-    }
 
     &-title {
       @include text-bodySmail-regular;
@@ -720,8 +720,6 @@
       }
     }
   }
-
-
 
   &-copyright {
     @include text-bodySmail-regular;

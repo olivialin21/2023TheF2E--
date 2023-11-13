@@ -1,4 +1,4 @@
-// import { useParallax } from 'react-scroll-parallax';
+import { useParallax } from 'react-scroll-parallax';
 import { Container } from 'react-bootstrap';
 import textTitle1 from "../images/text-candidate-title1.svg";
 import textTitle2 from "../images/text-candidate-title2.svg";
@@ -8,23 +8,25 @@ import textTitle5 from "../images/text-candidate-title5.svg";
 import imgCandidate from "../images/img-candidate.png";
 
 export default function Candidate() {
-  // const { ref } = useParallax({
-  //   speed: -20,
+  // const parallax = useParallax({
+  //   translateY: -10,
+  //   startScroll: 0,
+  //   endScroll: 1200,
   // });
 
   return (
     <section className="candidate" id="candidate">
       <Container>
         <div className="candidate-keyVision">
-          <div className="candidate-titles-1">
+          <div data-aos="fade-up" className="candidate-titles-1 animate__fadeInUp">
             <img className="candidate-title-1" src={textTitle1} alt="2023 THE F2E 立委競選" />
             <img className="candidate-title-2" src={textTitle2} alt="從喵的眼中 看見台灣" />
           </div>
           <div className="candidate-titles-2">
-            <img className="candidate-title-3" src={textTitle3} alt="KEEP IT POSSIBLE" />
+            <img data-aos="fade-up" data-aos-delay="1000" data-aos-offset="300" className="candidate-title-3" src={textTitle3} alt="KEEP IT POSSIBLE" />
             <img className="candidate-title-4" src={textTitle4} alt="Miao Li-Han" />
             <img className="candidate-title-5" src={textTitle5} alt="喵立翰" />
-            <img className="candidate-image" src={imgCandidate} alt="喵立翰" />
+            <img data-aos="fade-up" data-aos-delay="500" className="candidate-image" src={imgCandidate} alt="喵立翰" />
           </div>
         </div>
         <div className="candidate-claim">

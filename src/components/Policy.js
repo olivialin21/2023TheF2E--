@@ -2,9 +2,10 @@ import { Container } from 'react-bootstrap';
 import titlePolicy from "../images/title-policy.svg";
 
 export default function Policy() {
+
   return (
     <section className="policy" id="policy">
-      <Container>
+      <Container data-aos="fade-up" data-aos-offset="800">
         <img className="policy-title" src={titlePolicy} alt="政策議題" />
         <ul className="row policy-list">
           <li className="col">
