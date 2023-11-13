@@ -4,7 +4,10 @@ import { createContext } from "react";
 import {
   FLIP_CARD,
   SET_FORM_INPUT_ERROR,
-  RESET_FORM_INPUT_ERROR
+  RESET_FORM_INPUT_ERROR,
+  SET_CASE,
+  RESET_CASE,
+  SET_FORM_ERROR
 } from "../utils";
 
 export const StoreContext = createContext();
@@ -12,6 +15,8 @@ const initialState = {
   donation: {
     card: {
       isFlipped: false,
+      caseName: "",
+      caseMoney: ""
     }
   },
   email: {
@@ -21,9 +26,7 @@ const initialState = {
       tel: false,
       message: false,
     },
-    modal: {
-      show: false,
-    }
+    formError: false,
   }
 }
 
@@ -40,15 +43,36 @@ function reducer(state, action) {
           }
         }
       };
+    case SET_CASE:
+      return {
+        ...state,
+        donation: {
+          ...state.donation,
+          card: {
+            ...state.donation.card,
+            caseName: action.payload.caseName,
+            caseMoney: action.payload.caseMoney,
+          }
+        }
+      };
+    case RESET_CASE:
+      return {
+        ...state,
+        donation: {
+          ...state.donation,
+          card: {
+            ...state.donation.card,
+            caseName: "",
+            caseMoney: "",
+          }
+        }
+      }
     case SET_FORM_INPUT_ERROR:
       return {
         ...state,
         email: {
           ...state.email,
-          formInputError: {
-            ...state.email.formInputError,
-            [action.payload]: true
-          }
+          formInputError: action.payload
         }
       };
     case RESET_FORM_INPUT_ERROR:
@@ -62,6 +86,14 @@ function reducer(state, action) {
             tel: false,
             message: false,
           }
+        }
+      };
+    case SET_FORM_ERROR:
+      return {
+        ...state,
+        email: {
+          ...state.email,
+          formError: action.payload
         }
       };
     default:
