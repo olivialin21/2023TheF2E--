@@ -5,24 +5,31 @@ import imgActivity2 from "../images/img-activity2.png";
 import imgActivity3 from "../images/img-activity3.png";
 
 export default function Activity() {
+
+
   return (
     <section data-aos="fade-up" data-aos-offset="700" className="activity" id="activity">
       <Container>
         <img className="activity-title" src={titleActivity} alt="最新活動" />
+        
+        <div className="activity-list--mobile">
+
+        </div>
+
         <div className="row activity-list">
-          <div className="col-5">
+          <div className="col-lg-5 col-xs-7 activity-list-topNews">
             <div className="activity-list-card activity-list-cardB">
-              <time datatime="2023-12-26"><span>26</span><br />DEC.</time>
               <div className="activity-list-card-img">
                 <img src={imgActivity1} alt="參與台北寵物論壇 爭取貓咪友善環境" />
               </div>
               <div className="activity-list-card-text activity-list-cardB-text">
+                <time datatime="2023-12-26"><span>26</span><br />DEC.</time>
                 <h3>參與台北寵物論壇 爭取貓咪友善環境</h3>
                 <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
               </div>
             </div>
           </div>
-          <ul className="col-7 activity-list-insideList">
+          <ul className="col-lg-7 col-xs-7 activity-list-insideList">
             <li className="activity-list-card activity-list-cardS activity-list-cardS-1">
               <div className="activity-list-card-img">
                 <img src={imgActivity2} alt="帶著你的貓耳，來和我一起走！" />
