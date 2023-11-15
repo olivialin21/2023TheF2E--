@@ -13,22 +13,24 @@ export default function Header() {
     <>
       <Navbar expand="lg" className="header">
         <Container>
-          <h1><Navbar.Brand href="#" className="header-logo">喵立翰立委競選官網</Navbar.Brand></h1>
-          <button className="header-toggle">
-            <img src={IconMenu} alt="mobile-menu" onClick={toggleMenu}/>
-          </button>
-          <Navbar.Collapse id="basic-navbar-nav" className="header-collapse">
-            <Nav className="ms-auto header-nav">
-              <HashLink to="#candidate" className="header-nav-item">候選人主張</HashLink>
-              <HashLink to="#activity" className="header-nav-item">最新活動</HashLink>
-              <HashLink to="#policy" className="header-nav-item">政策議題</HashLink>
-              <HashLink to="#email" className="header-nav-item">民眾服務信箱</HashLink>
-              <HashLink to="#donation" className="header-nav-item-purple">
-                <img src={IconCoin} alt="icon-coin" />
-                <p>小額捐款</p>
-              </HashLink>
-            </Nav>
-          </Navbar.Collapse>
+          <div className="header-content">
+            <h1><Navbar.Brand href="#" className="header-logo">喵立翰立委競選官網</Navbar.Brand></h1>
+            <button className="header-toggle">
+              <img src={IconMenu} alt="mobile-menu" onClick={toggleMenu} />
+            </button>
+            <Navbar.Collapse id="basic-navbar-nav" className="header-collapse">
+              <Nav className="ms-auto header-nav">
+                <HashLink to="#candidate" className="header-nav-item">候選人主張</HashLink>
+                <HashLink to="#activity" className="header-nav-item">最新活動</HashLink>
+                <HashLink to="#policy" className="header-nav-item">政策議題</HashLink>
+                <HashLink to="#email" className="header-nav-item">民眾服務信箱</HashLink>
+                <HashLink to="#donation" className="header-nav-item-purple">
+                  <img src={IconCoin} alt="icon-coin" />
+                  <p>小額捐款</p>
+                </HashLink>
+              </Nav>
+            </Navbar.Collapse>
+          </div>
         </Container>
       </Navbar>
       <div className={`header-mobile-nav ${show ? "show" : ""}`}>

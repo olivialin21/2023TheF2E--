@@ -29,10 +29,10 @@ function Home() {
         <Header />
         <Candidate />
         <Activity />
-        <Policy />
-        <Donation />
-        <Email />
-        <Footer />
+        {/* <Policy /> */}
+        {/* <Donation /> */}
+        {/* <Email />/ */}
+        {/* <Footer /> */}
       </ParallaxProvider>
     </>
   )

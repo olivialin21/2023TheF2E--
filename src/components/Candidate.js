@@ -2,8 +2,10 @@ import { useParallax } from 'react-scroll-parallax';
 import { Container } from 'react-bootstrap';
 import textTitle1 from "../images/text-candidate-title1.svg";
 import textTitle2 from "../images/text-candidate-title2.svg";
+import textTitle2Mobile from "../images/text-candidate-title2-mobile.svg";
 import textTitle3 from "../images/text-candidate-title3.svg";
 import textTitle4 from "../images/text-candidate-title4.svg";
+import textTitle4Mobile from "../images/text-candidate-title4-mobile.svg";
 import textTitle5 from "../images/text-candidate-title5.svg";
 import imgCandidate from "../images/img-candidate.png";
 
@@ -18,19 +20,21 @@ export default function Candidate() {
     <section className="candidate" id="candidate">
       <Container>
         <div className="candidate-keyVision">
-          <div data-aos="fade-up" className="candidate-titles-1 animate__fadeInUp">
+          <div data-aos="fade-up" className="candidate-titles-1">
             <img className="candidate-title-1" src={textTitle1} alt="2023 THE F2E 立委競選" />
             <img className="candidate-title-2" src={textTitle2} alt="從喵的眼中 看見台灣" />
+            <img className="candidate-title-2-mobile" src={textTitle2Mobile} alt="從喵的眼中 看見台灣" />
           </div>
           <div className="candidate-titles-2">
-            <img data-aos="fade-up" data-aos-delay="1000" data-aos-offset="300" className="candidate-title-3" src={textTitle3} alt="KEEP IT POSSIBLE" />
+            <img data-aos="fade-up" data-aos-delay="1000" className="candidate-title-3" src={textTitle3} alt="KEEP IT POSSIBLE" />
             <img className="candidate-title-4" src={textTitle4} alt="Miao Li-Han" />
+            <img className="candidate-title-4-mobile" src={textTitle4Mobile} alt="Miao Li-Han" />
             <img className="candidate-title-5" src={textTitle5} alt="喵立翰" />
             <img data-aos="fade-up" data-aos-delay="500" className="candidate-image" src={imgCandidate} alt="喵立翰" />
           </div>
         </div>
         <div className="candidate-claim">
-          <h2>護航台灣幸福經濟  從照顧每一隻貓咪開始</h2>
+          <h2>護航台灣幸福經濟 <br className="candidate-claim-br"/>從照顧每一隻貓咪開始</h2>
           <p>
             我堅信，藉由推動更完善的貓咪福利和相關政策，更是間接地投資於台灣的未來。畢竟，民眾的身心健康與工作熱情是推動經濟的核心動力。透過完善的貓咪福利政策，為台灣的 GDP 經濟帶來巨大效益。<br />
             <br />

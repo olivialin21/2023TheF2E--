@@ -40,7 +40,7 @@ export default function Footer() {
               <h4 className="footer-content-title">Office information</h4>
               <ul className="footer-content-info-list">
                 <li>地址：台北市喵星區毛茸茸大道88號喵喵大樓3樓</li>
-                <li>電話：(02) 888-5678 </li>
+                <li>電話：<Link to="tel:(02)888-5678">(02) 888-5678</Link></li>
                 <li>郵件：<Link to="mailto:meowoffice@linmeow.tw">meowoffice@linmeow.tw</Link></li>
               </ul>
             </div>

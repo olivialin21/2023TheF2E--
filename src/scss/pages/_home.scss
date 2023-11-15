@@ -26,11 +26,17 @@
     padding: 14px 0;
   }
 
+  &-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   &-logo {
     display: block;
     background-image: url(../../images/logo.svg);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     width: 235px;
     height: 59px;
     text-indent: 101%;
@@ -124,7 +130,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 13.5px 8px;
+        padding: 13.5px 0;
       }
 
       &.show {
@@ -155,7 +161,7 @@
       display: block;
       background-image: url(../../images/logo-dark.svg);
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       width: 150px;
       height: 38px;
       text-indent: 101%;
@@ -181,6 +187,10 @@
   // margin-top: 95px;
   padding: 120px 0 30px;
 
+  @media (max-width: 992px) {
+    padding-top: 96px;
+  }
+
   &-keyVision {
     position: relative;
   }
@@ -194,19 +204,55 @@
       top: 72px;
       width: 60%;
     }
+
+    @media (max-width: 767px) {
+      position: static;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   &-titles-2 {
     position: relative;
+
+    @media (max-width: 767px) {
+      position: static;
+    }
   }
 
   &-title {
     &-1 {
       padding: 11.5px 0;
+
+      @media (max-width: 767px) {
+        padding: 6px 0;
+        height: 30px;
+        // margin: 0 auto;
+      }
+
+      @media (max-width: 576px) {
+        margin: 0 auto;
+      }
     }
 
     &-2 {
       padding: 9.5px 0;
+
+      &-mobile {
+        display: none;
+        position: absolute;
+        padding: 0 1.5px;
+        top: 40px;
+        left: 0;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+
+        &-mobile {
+          display: block;
+        }
+      }
     }
 
     &-3 {
@@ -221,6 +267,12 @@
       @media (max-width: 992px) {
         top: 80%;
       }
+
+      @media (max-width: 767px) {
+        top: 180px;
+        width: 30px;
+        height: auto;
+      }
     }
 
     &-4 {
@@ -228,6 +280,13 @@
       padding: 13.5px 5px;
       bottom: 17px;
       left: 53px;
+
+      &-mobile {
+        display: none;
+        position: absolute;
+        top: 180px;
+        left: 36px;
+      }
 
       @media (max-width: 1200px) {
         height: 25%;
@@ -238,6 +297,14 @@
       @media (max-width: 992px) {
         height: 23%;
       }
+
+      @media (max-width: 767px) {
+        display: none;
+
+        &-mobile {
+          display: block;
+        }
+      }
     }
 
     &-5 {
@@ -247,6 +314,10 @@
 
       @media (max-width: 1200px) {
         height: 60%;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
       }
     }
   }
@@ -266,6 +337,14 @@
     @media (max-width: 992px) {
       height: 400px;
     }
+
+    @media (max-width: 767px) {
+      margin-top: 46px;
+      margin-right: 0;
+      margin-bottom: -21px; // svg 邊緣沒切好
+      max-width: 242px;
+      height: auto;
+    }
   }
 
   &-claim {
@@ -278,6 +357,27 @@
     box-shadow: -15px 20px 0px 0px $color-purple;
     border-radius: 80px 0 80px 0;
 
+    @media (max-width: 992px) {
+      padding: 20px 30px 30px;
+      box-shadow: -10px 10px 0px 0px $color-purple;
+    }
+
+    @media (max-width: 767px) {
+      position: relative;
+      z-index: 9;
+      padding: 7px 12px 15px;
+      box-shadow: -5px 5px 0px 0px $color-purple;
+      border: 3px solid $color-purple;
+    }
+
+    &-br {
+      display: none;
+
+      @media (max-width: 992px) {
+        display: block;
+      }
+    }
+
     h2 {
       @include text-heading1-bold;
       text-align: center;
@@ -289,6 +389,12 @@
 
       @media (max-width: 992px) {
         @include text-heading3-bold;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 767px) {
+        @include text-heading5-bold;
+        margin-bottom: 10px;
       }
     }
 
@@ -301,6 +407,10 @@
 
       @media (max-width: 992px) {
         @include text-heading6-bold;
+      }
+
+      @media (max-width: 767px) {
+        @include text-bodyNormal-regular
       }
     }
   }
@@ -881,6 +991,8 @@
   &-logo {
     display: block;
     background-image: url(../../images/logo-dark.svg);
+    background-size: contain;
+    background-position: center;
     width: 235px;
     height: 59px;
     text-indent: 101%;
