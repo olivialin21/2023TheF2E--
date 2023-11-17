@@ -8,7 +8,7 @@ export default function Policy() {
       <Container data-aos="fade-up" data-aos-offset="800">
         <img className="policy-title" src={titlePolicy} alt="政策議題" />
         <ul className="row policy-list">
-          <li className="col">
+          <li className="col-lg-4 col-sm-12 col-xs-12">
             <div className="policy-list-card">
               <p className="policy-list-card-tag">政策一</p>
               <div className="policy-list-card-text">
@@ -21,7 +21,7 @@ export default function Policy() {
               </div>
             </div>
           </li>
-          <li className="col">
+          <li className="col-lg-4 col-sm-12 col-xs-12">
             <div className="policy-list-card policy-list-card-2">
               <p className="policy-list-card-tag">政策二</p>
               <div className="policy-list-card-text">
@@ -29,12 +29,12 @@ export default function Policy() {
                 <ol>
                   <li>建立寵物公園：每年撥款新台幣 5 億元，用於在各大都市建立專屬的寵物公園。</li>
                   <li>推廣寵物友善商家：鼓勵商家提供寵物友善的環境，並為參與的商家提供稅收優惠。預計在政策實施後的首年，將有超過 500 家商家加入此計畫</li>
-                  <li>舉辦寵物活動和工作坊：與各大寵物社團和組織合作，每年舉辦至少 5 場大型的寵物活動<span className="policy-list-card-text-ellipsis">⋯</span><span className="policy-list-card-text-hidden">，包括寵物才藝比賽、飼養知識工作坊等</span></li>
+                  <li>舉辦寵物活動和工作坊：與各大寵物社團和組織合作，每年舉辦至少 5 場大型的寵物活動，包括寵物才藝比賽、飼養知識工作坊等</li>
                 </ol>
               </div>
             </div>
           </li>
-          <li className="col">
+          <li className="col-lg-4 col-sm-12 col-xs-12">
             <div className="policy-list-card">
               <p className="policy-list-card-tag">政策三</p>
               <div className="policy-list-card-text">
@@ -42,7 +42,7 @@ export default function Policy() {
                 <ol>
                   <li>建立寵物飼養教育中心：每年撥款新台幣 3 億元，用於在全國各地建立專業的寵物飼養教育中心。預計在第一年內，在全國至少 5 大城市設立教育中心。</li>
                   <li>推廣寵物飼養課程：與學校、社區組織和寵物社團合作，推出一系列免費的寵物飼養課程。預計每年將有超過 10,000 名市民受益。</li>
-                  <li>製作教育資料：出版寵物飼養手冊、影片和<span className="policy-list-card-text-ellipsis">⋯</span><span className="policy-list-card-text-hidden">線上課程，讓所有有意飼養寵物的家庭都能輕鬆取得正確的知識</span></li>
+                  <li>製作教育資料：出版寵物飼養手冊、影片和線上課程，讓所有有意飼養寵物的家庭都能輕鬆取得正確的知識</li>
                 </ol>
               </div>
             </div>

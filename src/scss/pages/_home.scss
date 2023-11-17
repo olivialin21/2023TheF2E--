@@ -584,10 +584,10 @@
         padding-bottom: 44px;
       }
 
-      .swiper-slide{
+      .swiper-slide {
         opacity: 0.8;
 
-        &-active{
+        &-active {
           opacity: 1;
         }
       }
@@ -596,18 +596,17 @@
         bottom: 0;
       }
 
-      .activity-list-card-text {
-        p {
-          height: 100%;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          -webkit-line-clamp: 3; /* 顯示的行數 */
-        }
+      .activity-list-card-text p {
+        height: 100%;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        /* 顯示的行數 */
       }
 
-      .activity-list-cardB-text{
+      .activity-list-cardB-text {
         height: auto;
       }
 
@@ -615,13 +614,14 @@
         height: 202px;
       }
 
-      .swiper-pagination-bullet{
+      .swiper-pagination-bullet {
+        opacity: 1;
         width: 12px;
         height: 12px;
         background-color: $color-white;
       }
 
-      .swiper-pagination-bullet-active{
+      .swiper-pagination-bullet-active {
         background-color: $color-purple;
       }
 
@@ -643,12 +643,27 @@
   padding: 30px 0 50px;
   background-color: $color-purple;
 
+  @media (max-width: 992px) {
+    padding-top: 20px;
+  }
+
   &-title {
     margin: 0 auto;
+
+    @media (max-width: 992px) {
+      height: 56px;
+      padding: 10px 0;
+      margin-bottom: 15px;
+    }
   }
 
   &-list {
     padding-top: 30px;
+
+    @media (max-width: 992px) {
+      padding-top: 0;
+      gap: 20px;
+    }
 
     &-card {
       height: 379px;
@@ -657,6 +672,14 @@
       border-radius: 8px;
       transition: all 0.3s;
       overflow: hidden;
+
+      @media (max-width: 1200px) {
+        height: 427px;
+      }
+
+      @media (max-width: 992px) {
+        height: auto;
+      }
 
       &:hover {
         cursor: pointer;
@@ -670,31 +693,56 @@
           transform: translateY(-44px);
         }
 
-        .policy-list-card-text-ellipsis {
-          display: none;
-        }
+        ol {
+          -webkit-line-clamp: 11;
 
-        .policy-list-card-text-hidden {
-          opacity: 1;
+          @media (max-width: 1200px) {
+            -webkit-line-clamp: 20;
+          }
         }
       }
 
       h3 {
         @include text-heading4-bold;
         padding: 10px 0;
+
+        @media (max-width: 576px) {
+          @include text-heading5-bold;
+        }
       }
 
       p {
         @include text-bodyMedium-regular;
+
+        @media (max-width: 576px) {
+          @include text-bodyNormal-regular;
+        }
       }
 
       ol {
         padding-left: 24px;
         list-style-type: decimal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 8;
+
+        @media (max-width: 1200px) {
+          -webkit-line-clamp: 10;
+        }
+
+        @media (max-width: 992px) {
+          -webkit-line-clamp: 20;
+        }
       }
 
       &-2 {
         margin-top: 30px;
+
+        @media (max-width: 1200px) {
+          margin-top: 0;
+        }
       }
 
       &-tag {

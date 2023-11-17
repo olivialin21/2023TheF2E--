@@ -29,7 +29,7 @@ function Home() {
         <Header />
         <Candidate />
         <Activity />
-        {/* <Policy /> */}
+        <Policy />
         {/* <Donation /> */}
         {/* <Email />/ */}
         {/* <Footer /> */}
