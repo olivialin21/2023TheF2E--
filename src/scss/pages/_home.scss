@@ -116,7 +116,7 @@
   &-mobile {
     &-nav {
       @include text-heading5-bold;
-      display: none;
+      opacity: 0;
       position: fixed;
       z-index: 9999;
       width: 100vw;
@@ -125,6 +125,8 @@
       left: 0;
       background-color: rgba($color: $color-purple, $alpha: 0.95);
       text-align: right;
+      pointer-events: none;
+      transition: all 0.3s;
 
       &Top {
         display: flex;
@@ -134,7 +136,8 @@
       }
 
       &.show {
-        display: block;
+        opacity: 1;
+        pointer-events: all;
       }
 
       &-item {
@@ -184,7 +187,6 @@
 
 // candidate
 .candidate {
-  // margin-top: 95px;
   padding: 120px 0 30px;
 
   @media (max-width: 992px) {
@@ -366,8 +368,14 @@
       position: relative;
       z-index: 9;
       padding: 7px 12px 15px;
+      margin-left: auto;
       box-shadow: -5px 5px 0px 0px $color-purple;
       border: 3px solid $color-purple;
+    }
+
+    @media (max-width: 576px) {
+      width: auto;
+      margin-left: 39px;
     }
 
     &-br {
@@ -420,8 +428,18 @@
 .activity {
   padding: 25px 0 45px;
 
+  @media (max-width: 992px) {
+    padding: 0 0 30px;
+  }
+
   &-title {
     margin: 0 auto;
+
+    @media (max-width: 992px) {
+      height: 56px;
+      padding: 10px 0;
+      margin-bottom: 15px;
+    }
   }
 
   &-list {
@@ -512,8 +530,22 @@
       }
 
       &-text {
+        position: relative;
         height: calc(100% - 325px);
         border-radius: 0 0 8px 8px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -25px;
+          left: calc(50% - 22px);
+          width: 0;
+          height: 0;
+          border-bottom: 25px solid;
+          border-left: 22px solid;
+          border-right: 22px solid;
+          border-color: transparent transparent $color-light transparent;
+        }
       }
     }
 
@@ -543,6 +575,61 @@
       &-text {
         border-radius: 0 8px 8px 0;
       }
+    }
+
+    &-mobile {
+      display: none;
+
+      .swiper {
+        padding-bottom: 44px;
+      }
+
+      .swiper-slide{
+        opacity: 0.8;
+
+        &-active{
+          opacity: 1;
+        }
+      }
+
+      .swiper-pagination {
+        bottom: 0;
+      }
+
+      .activity-list-card-text {
+        p {
+          height: 100%;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          -webkit-line-clamp: 3; /* 顯示的行數 */
+        }
+      }
+
+      .activity-list-cardB-text{
+        height: auto;
+      }
+
+      .activity-list-card-img {
+        height: 202px;
+      }
+
+      .swiper-pagination-bullet{
+        width: 12px;
+        height: 12px;
+        background-color: $color-white;
+      }
+
+      .swiper-pagination-bullet-active{
+        background-color: $color-purple;
+      }
+
+      @media (max-width: 992px) {
+        display: block;
+      }
+
+
     }
   }
 
