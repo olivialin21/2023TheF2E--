@@ -30,7 +30,7 @@ function Home() {
         <Candidate />
         <Activity />
         <Policy />
-        {/* <Donation /> */}
+        <Donation />
         {/* <Email />/ */}
         {/* <Footer /> */}
       </ParallaxProvider>

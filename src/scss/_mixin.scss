@@ -71,6 +71,20 @@
   border-radius: 100px;
   transition: all 0.3s;
 
+  @media (max-width: 767px) {
+    @include text-heading5-bold;
+    padding: 12px 27px;
+
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 576px){
+    padding: 12px;
+  }
+
   &:hover {
     color: $color-purple;
     background-color: $color-light;
@@ -91,6 +105,20 @@
   border: 3px solid $color-purple;
   border-radius: 100px;
   transition: all 0.3s;
+
+  @media (max-width: 767px) {
+    @include text-heading5-bold;
+    padding: 12px 27px;
+
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 576px){
+    padding: 12px;
+  }
 
   &:hover {
     color: $color-light;

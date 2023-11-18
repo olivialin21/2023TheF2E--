@@ -109,7 +109,7 @@ export default function Donation() {
           <div className="donation-card-inner">
             <div className="donation-card-front">
               <img className="donation-card-front-title" src={titleDonation} alt="小額捐款" />
-              <p className="donation-card-front-text">您的小筆捐款，是每隻毛孩未來的大大動力！</p>
+              <p className="donation-card-front-text">您的小筆捐款，<br className="donation-card-front-br" />是每隻毛孩未來的大大動力！</p>
               <img className="donation-card-front-total" src={textTotal} alt="累積總金額" />
               <p ref={counterRef} className="donation-card-front-totalNum" id="counter">NT$987,655,873</p>
               <button className="donation-card-front-goToDanate" onClick={toggleCard}><img src={IconCoin} alt="icon-coin" />前往捐款</button>
