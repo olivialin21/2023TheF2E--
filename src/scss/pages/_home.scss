@@ -58,6 +58,11 @@
     display: none;
     background-color: $color-white;
     border: none;
+    transition: all 0.3s;
+
+    &:hover{
+      opacity: 0.8;
+    }
 
     &:focus {
       outline: none;
@@ -105,9 +110,35 @@
         align-items: center;
         gap: 10px;
 
-        img {
+        &:hover {
+          div::after {
+            opacity: 1;
+          }
+        }
+
+        &-img {
+          position: relative;
           width: 30px;
           height: 30px;
+          background-image: url(../../images/icon-coin-white.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../../images/icon-coin-purple.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: all 0.3s;
+          }
         }
       }
     }
@@ -142,20 +173,70 @@
 
       &-item {
         position: relative;
-        display: block;
+        display: inline-block;
         padding: 15px 8px;
         color: $color-white;
-        transition: all 0.3s;
 
-        &:hover {
-          color: $color-purple;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          width: 0;
+          height: 3px;
           background-color: $color-white;
+          transition: all 0.3s;
+        }
+
+        &:hover::after {
+          width: 100%;
+          // color: $color-purple;
+          // background-color: $color-white;
           transition: all 0.3s;
         }
 
         &-white {
           @include white-btn;
-          display: inline-block;
+          display: inline-flex;
+          padding: 12px 17px;
+          margin-top: 15px;
+
+          &:hover {
+            div::after {
+              opacity: 1;
+            }
+          }
+
+          &-img {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-image: url(../../images/icon-coin-purple.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: url(../../images/icon-coin-white.svg);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 0;
+              transition: all 0.3s;
+            }
+          }
+
+          &:hover {
+            background-color: transparent;
+            border: 3px solid $color-white;
+          }
         }
       }
     }
@@ -165,6 +246,7 @@
       background-image: url(../../images/logo-dark.svg);
       background-position: center;
       background-size: contain;
+      background-repeat: no-repeat;
       width: 150px;
       height: 38px;
       text-indent: 101%;
@@ -181,6 +263,11 @@
       background-color: transparent;
       border: none;
       padding: 0;
+      transition: all 0.3s;
+
+      &:hover{
+        opacity: 0.8;
+      }
     }
   }
 }
@@ -874,8 +961,40 @@
         gap: 10px;
         margin: 20px auto 0;
 
-        img {
-          display: inline-block;
+        &:hover {
+          div::after {
+            opacity: 1;
+          }
+        }
+
+        &-img {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          background-image: url(../../images/icon-coin-white.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          @media (max-width: 767px) {
+            width: 30px;
+            height: 30px;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../../images/icon-coin-purple.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: all 0.3s;
+          }
         }
 
         @media (max-width: 767px) {
@@ -1112,8 +1231,48 @@
         align-items: center;
         gap: 10px;
 
-        img {
-          display: inline-block;
+        &:hover {
+          div::after {
+            opacity: 1;
+          }
+        }
+
+        &-img {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          background-image: url(../../images/icon-coin-white.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          @media (max-width: 767px) {
+            width: 30px;
+            height: 30px;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../../images/icon-coin-purple.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: all 0.3s;
+          }
+        }
+
+        @media (max-width: 767px) {
+          padding: 12px 27px;
+        }
+
+        @media (max-width: 576px) {
+          padding: 12px;
         }
       }
     }

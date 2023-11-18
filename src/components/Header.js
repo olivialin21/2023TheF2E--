@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
-import IconCoin from "../images/icon-coin.svg";
 import IconMenu from "../images/icon-menu.svg";
 import IconClose from "../images/icon-close.svg";
 
@@ -25,7 +24,7 @@ export default function Header() {
                 <HashLink to="#policy" className="header-nav-item">政策議題</HashLink>
                 <HashLink to="#email" className="header-nav-item">民眾服務信箱</HashLink>
                 <HashLink to="#donation" className="header-nav-item-purple">
-                  <img src={IconCoin} alt="icon-coin" />
+                  <div className="header-nav-item-purple-img"></div>
                   <p>小額捐款</p>
                 </HashLink>
               </Nav>
@@ -43,20 +42,20 @@ export default function Header() {
           </div>
           <ul>
             <li>
-              <HashLink to="#candidate" className="header-mobile-nav-item">候選人主張</HashLink>
+              <HashLink to="#candidate" className="header-mobile-nav-item" onClick={toggleMenu}>候選人主張</HashLink>
             </li>
             <li>
-              <HashLink to="#activity" className="header-mobile-nav-item">最新活動</HashLink>
+              <HashLink to="#activity" className="header-mobile-nav-item" onClick={toggleMenu}>最新活動</HashLink>
             </li>
             <li>
-              <HashLink to="#policy" className="header-mobile-nav-item">政策議題</HashLink>
+              <HashLink to="#policy" className="header-mobile-nav-item" onClick={toggleMenu}>政策議題</HashLink>
             </li>
             <li>
-              <HashLink to="#email" className="header-mobile-nav-item">民眾服務信箱</HashLink>
+              <HashLink to="#email" className="header-mobile-nav-item" onClick={toggleMenu}>民眾服務信箱</HashLink>
             </li>
             <li>
-              <HashLink to="#donation" className="header-mobile-nav-item-white">
-                <img src={IconCoin} alt="icon-coin" />
+              <HashLink to="#donation" className="header-mobile-nav-item-white" onClick={toggleMenu}>
+                <div className="header-mobile-nav-item-white-img"></div>
                 <p>小額捐款</p>
               </HashLink>
             </li>

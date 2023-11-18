@@ -1,18 +1,12 @@
 import { Container } from 'react-bootstrap';
-// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { FreeMode, Pagination } from 'swiper/modules';
 import titleActivity from "../images/title-activity.svg";
 import imgActivity1 from "../images/img-activity1.png";
 import imgActivity2 from "../images/img-activity2.png";
 import imgActivity3 from "../images/img-activity3.png";
 
 export default function Activity() {
-  // 安裝所需的 Swiper 模組
-  // SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
-
   return (
     <section data-aos="fade-up" data-aos-offset="700" className="activity" id="activity">
       <Container>

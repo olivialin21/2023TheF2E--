@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import imgCat from "../images/img-cat.png";
 import { Link } from 'react-router-dom';

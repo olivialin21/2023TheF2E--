@@ -5,7 +5,6 @@ import { StoreContext } from "../store"
 import { flipCard, setCase, resetCase } from '../actions'
 import titleDonation from "../images/title-donation.svg";
 import textTotal from "../images/text-donation-total.svg";
-import IconCoin from "../images/icon-coin.svg";
 import text600 from "../images/text-donation-NT600.svg";
 import text6000 from "../images/text-donation-NT6000.svg";
 import text60000 from "../images/text-donation-NT60000.svg";
@@ -112,7 +111,7 @@ export default function Donation() {
               <p className="donation-card-front-text">您的小筆捐款，<br className="donation-card-front-br" />是每隻毛孩未來的大大動力！</p>
               <img className="donation-card-front-total" src={textTotal} alt="累積總金額" />
               <p ref={counterRef} className="donation-card-front-totalNum" id="counter">NT$987,655,873</p>
-              <button className="donation-card-front-goToDanate" onClick={toggleCard}><img src={IconCoin} alt="icon-coin" />前往捐款</button>
+              <button className="donation-card-front-goToDanate" onClick={toggleCard}><div className="donation-card-front-goToDanate-img"></div>前往捐款</button>
             </div>
             <div className="donation-card-back">
               <form id="donate-form" action="" className="donation-card-back-container">
@@ -152,7 +151,7 @@ export default function Donation() {
                 </ul>
                 <div className="donation-card-back-btn">
                   <button className="donation-card-back-goBack" onClick={toggleCard}>返回</button>
-                  <button className="donation-card-back-goToDanate" onClick={donate}><img src={IconCoin} alt="icon-coin" />我要捐款</button>
+                  <button className="donation-card-back-goToDanate" onClick={donate}><div className="donation-card-back-goToDanate-img"></div>我要捐款</button>
                 </div>
               </form>
             </div>

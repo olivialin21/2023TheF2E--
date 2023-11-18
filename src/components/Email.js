@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState, useRef } from 'react';
+import { useContext, useState } from 'react';
 import { Container, Modal } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { StoreContext } from "../store";
 import { setFormInputError, setFormError } from '../actions';
 import titleEmail from "../images/title-email.svg";
