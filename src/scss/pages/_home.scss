@@ -942,7 +942,7 @@
             padding: 12px 17px;
             border: 3px solid $color-purple;
 
-            @media (max-width: 576px){
+            @media (max-width: 576px) {
               padding: 12px 7px;
             }
           }
@@ -962,7 +962,7 @@
             border: 3px solid $color-gray-moreDeep;
             padding: 12px 17px;
 
-            @media (max-width: 576px){
+            @media (max-width: 576px) {
               padding: 12px 7px;
             }
           }
@@ -1066,7 +1066,7 @@
               padding: 12px 17px;
             }
 
-            @media (max-width: 576px){
+            @media (max-width: 576px) {
               padding: 12px 7px;
             }
           }
@@ -1083,7 +1083,7 @@
               padding: 12px 17px;
             }
 
-            @media (max-width: 576px){
+            @media (max-width: 576px) {
               padding: 12px 7px;
             }
           }
@@ -1184,22 +1184,40 @@
 .email {
   padding: 30px 0;
 
+  @media (max-width: 992px) {
+    padding-top: 20px;
+  }
+
   &-content {
     display: flex;
 
     &-title {
       margin: 0 auto 20px;
+
+      @media (max-width: 992px) {
+        height: 56px;
+        padding: 10px 0;
+        margin-bottom: 10px;
+      }
     }
 
-    &-text {
-      width: 679px;
-      margin-left: 12px;
+    &-text-1,
+    &-text-2 {
+      @include text-heading4-bold;
+      max-width: 479px;
+      text-align: center;
+      margin: 10px auto 0;
+    }
 
-      p {
-        @include text-heading4-bold;
-        max-width: 479px;
-        text-align: center;
-        margin: 10px auto 0;
+    &-text-1 {
+      @media (max-width: 767px) {
+        @include text-heading5-bold
+      }
+    }
+
+    &-text-2 {
+      @media (max-width: 767px) {
+        @include text-bodyNormal-regular;
       }
     }
 
@@ -1228,12 +1246,17 @@
 
       &-btn {
         @include purple-btn;
+
+        @media (max-width: 576px) {
+          padding: 12px 27px;
+        }
       }
     }
   }
 
   &-modal {
     .modal-dialog {
+      margin: 0;
       max-width: none;
       width: 100%;
       height: 100%;
@@ -1243,27 +1266,47 @@
     }
 
     .modal-content {
-      width: 600px;
+      max-width: 600px;
+      width: 100%;
       height: 400px;
       border-radius: 80px;
       padding: 30px 38px;
+      margin: 0 20px;
       text-align: center;
       justify-content: center;
       align-items: center;
+
+      @media (max-width: 767px) {
+        height: auto;
+        min-height: 328px;
+        padding: 30px;
+      }
     }
 
     h4 {
       @include text-heading4-bold;
       margin-bottom: 10px;
+
+      @media (max-width: 767px) {
+        @include text-heading5-bold;
+      }
     }
 
     p {
       @include text-heading6-bold;
       margin-bottom: 50px;
+
+      @media (max-width: 767px) {
+        @include text-bodyNormal-regular;
+      }
     }
 
     button {
       @include white-btn;
+
+      @media (max-width: 767px) {
+        padding: 12px 27px;
+      }
     }
   }
 }

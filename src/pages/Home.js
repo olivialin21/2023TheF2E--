@@ -31,7 +31,7 @@ function Home() {
         <Activity />
         <Policy />
         <Donation />
-        {/* <Email />/ */}
+        <Email />
         {/* <Footer /> */}
       </ParallaxProvider>
     </>

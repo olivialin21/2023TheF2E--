@@ -43,12 +43,12 @@ export default function Email() {
       <section className="email" id="email">
         <Container data-aos="fade-up" data-aos-offset="800">
           <div className="row email-content">
-            <div className="col-7 email-content-text">
+            <div className="col-lg-7 col-sm-12 col-xs-12 email-content-text">
               <img className="email-content-title" src={titleEmail} alt="民眾服務信箱" />
-              <p>您的聲音，我們的行動！</p>
-              <p>親愛的鄉親，每一位市民的意見都是我們社區前進的原動力。無論大小事，我都誠摯希望聽到您的建議。分享您的想法，一同為我們的未來打造更美好！</p>
+              <p className="email-content-text-1">您的聲音，我們的行動！</p>
+              <p className="email-content-text-2">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力。無論大小事，我都誠摯希望聽到您的建議。分享您的想法，一同為我們的未來打造更美好！</p>
             </div>
-            <form className="col-5 email-content-form" action="">
+            <form className="col-lg-5 col-sm-12 col-xs-12 email-content-form" action="">
               <input name="name" type="text" className={`email-content-form-input ${formInputError.name ? "error" : ""}`} placeholder="您的姓名" onChange={handleInputChange} />
               <input name="email" type="email" className={`email-content-form-input ${formInputError.email ? "error" : ""}`} placeholder="您的 Email" onChange={handleInputChange} />
               <input name="tel" type="tel" className={`email-content-form-input ${formInputError.tel ? "error" : ""}`} placeholder="您的手機" onChange={handleInputChange} />
