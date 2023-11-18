@@ -1,6 +1,5 @@
 # 2023 THE F2E - 立委競選官網
-> THE F2E 5TH 第一關－立委競選官網
-> [DEMO](https://2023TheF2E-Misson1.vercel.app/)
+> [THE F2E 5TH 第一關－立委競選官網 DEMO](https://2023TheF2E-Misson1.vercel.app/)
 
 ---
 ### 介紹
