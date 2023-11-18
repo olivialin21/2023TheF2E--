@@ -60,7 +60,7 @@
     border: none;
     transition: all 0.3s;
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
 
@@ -197,6 +197,7 @@
 
         &-white {
           @include white-btn;
+          @include text-heading5-bold;
           display: inline-flex;
           padding: 12px 17px;
           margin-top: 15px;
@@ -265,7 +266,7 @@
       padding: 0;
       transition: all 0.3s;
 
-      &:hover{
+      &:hover {
         opacity: 0.8;
       }
     }
