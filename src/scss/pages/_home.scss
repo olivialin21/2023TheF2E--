@@ -454,6 +454,7 @@
       border-radius: 8px;
       box-shadow: 0 0 0 3px transparent;
       transition: all 0.3s;
+      overflow: hidden;
 
       &:hover {
         cursor: pointer;
@@ -585,6 +586,7 @@
       }
 
       .swiper-slide {
+        padding-top: 3px;
         opacity: 0.8;
 
         &-active {
@@ -1316,6 +1318,11 @@
   padding: 15px 0;
   background-color: $color-purple;
 
+  @media (max-width: 992px) {
+    padding-top: 30px;
+    margin-top: 80px;
+  }
+
   a {
     transition: all 0.3s;
   }
@@ -1333,6 +1340,19 @@
     top: -196px;
     left: 7%;
     pointer-events: none;
+
+    @media (max-width: 1200px) {
+      top: -170px;
+      left: -3%;
+      height: 230px;
+    }
+
+    @media (max-width: 992px) {
+      height: 179px;
+      left: 50%;
+      top: -150px;
+      transform: translateX(-50%);
+    }
   }
 
   &-logo {
@@ -1340,6 +1360,7 @@
     background-image: url(../../images/logo-dark.svg);
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     width: 235px;
     height: 59px;
     text-indent: 101%;
@@ -1351,12 +1372,21 @@
       cursor: pointer;
       opacity: 0.8;
     }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 
   &-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     &-title {
       @include text-bodySmail-regular;
@@ -1370,6 +1400,14 @@
       width: 215px;
       margin-left: auto;
       margin-right: 60px;
+
+      @media (max-width: 1200px) {
+        margin-right: 20px;
+      }
+
+      @media (max-width: 992px) {
+        margin: 0 auto 60px;
+      }
 
       &-list {
         display: flex;
@@ -1398,11 +1436,19 @@
     &-info {
       width: 371px;
 
+      @media (max-width: 992px) {
+        width: auto;
+      }
+
       &-list {
         @include text-bodyNormal-regular;
         color: $color-light;
         padding-left: 30px;
         margin-top: 5px;
+
+        @media (max-width: 992px) {
+          padding-left: 0;
+        }
 
         a {
           color: $color-light;

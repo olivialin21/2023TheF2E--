@@ -32,7 +32,7 @@ function Home() {
         <Policy />
         <Donation />
         <Email />
-        {/* <Footer /> */}
+        <Footer />
       </ParallaxProvider>
     </>
   )
