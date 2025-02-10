@@ -646,14 +646,10 @@
       }
 
       .activity-list-card-img {
-        min-width: 276px;
-        height: 232px;
+        width: 232px;
+        height: auto;
         border-radius: 8px 0 0 8px;
-
-        @media (max-width: 1400px) {
-          min-width: 232px;
-          height: auto;
-        }
+        flex-shrink: 0;
       }
 
       time {
